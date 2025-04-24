@@ -157,12 +157,6 @@ This project involves building a blog system from scratch using **PHP**, **MySQL
 
 ---
 
-## 📄 License
-
-MIT License
-
----
-
 ## 🤝 Contributions
 
 Pull Requests are welcome! Let's build and learn together.
