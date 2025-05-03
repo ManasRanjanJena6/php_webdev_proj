@@ -1,64 +1,80 @@
-# 📝 PHP Blog - CRUD Application with User Authentication
+# 🚀 Advanced Features Implementation - PHP Blog Enhancement
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![Status](https://img.shields.io/badge/status-active-brightgreen)
-![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
-![Built With](https://img.shields.io/badge/built%20with-PHP-orange)
-![XAMPP](https://img.shields.io/badge/env-XAMPP-lightgrey)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
+![Built With](https://img.shields.io/badge/Built%20With-PHP-blue)
+![UI](https://img.shields.io/badge/UI-Bootstrap%205-purple)
+![Pagination](https://img.shields.io/badge/Feature-Pagination-yellowgreen)
+![Search](https://img.shields.io/badge/Feature-Search-blueviolet)
 
----
-
-## 🚀 Features
-
-- ✅ User Registration & Login (with password hashing)
-- 🛡️ Session-based Authentication
-- 📄 Create, Read, Update, Delete (CRUD) for blog posts
-- 🎨 Responsive UI with Bootstrap 5
+> 🕒 **Timeline:** 10 Days  
+> 📌 **Task 3 - Internship Project**  
+> 🏢 **Company:** Apex Planet Pvt. Ltd.  
+> 📁 [GitHub Repo](https://github.com/ManasRanjanJena6/php_webdev_proj/tree/main/Task_3/Advanced_Features_Implementation)
 
 ---
 
-## 🛠️ Tech Stack
+## 🎯 Objective
 
-- **Frontend**: HTML5, CSS3, Bootstrap 5
-- **Backend**: PHP (Core)
-- **Database**: MySQL
-- **Server**: Apache (via XAMPP)
+Enhance the existing blog application with:
 
----
-
-## 📂 Project Structure
+- 🔎 **Search functionality** for filtering posts
+- 📚 **Pagination** for improved content navigation
+- 🎨 **UI/UX redesign** using Bootstrap 5
 
 ---
 
-## 🧑‍💻 Installation & Setup (XAMPP)
+## ✅ Features
+
+### 🔍 1. Search Functionality
+- Integrated search bar to filter posts by title/content
+- SQL-based dynamic result display
+- Prevents SQL injection using prepared statements
+
+### 📄 2. Pagination
+- Displays limited posts per page (configurable)
+- Pagination controls (Next, Previous, Page Numbers)
+- Efficient rendering for large datasets
+
+### 💡 3. User Interface Improvements
+- Mobile-first design with Bootstrap 5
+- Enhanced visual consistency and readability
+- Custom CSS for better spacing, fonts, and colors
+
+---
+
+## 🧰 Tech Stack
+
+| Layer        | Technology        |
+|--------------|-------------------|
+| Frontend     | HTML5, CSS3, Bootstrap 5 |
+| Backend      | PHP (Core)        |
+| Database     | MySQL             |
+| Server       | Apache via XAMPP  |
+
+---
+
+## 📂 Folder Structure
+
+Task_3/
+├── db.php
+├── index.php # Main page with search + pagination
+├── search.php # Handles search logic (if separate)
+├── style.css
+├── assets/
+│ └── images/ # (Optional) UI assets
+├── includes/
+│ └── header.php
+│ └── footer.php
+└── README.md
+
+
+---
+
+## 🧑‍💻 Installation & Setup
 
 1. **Download & Install XAMPP**  
-   [XAMPP Download Link](https://www.apachefriends.org/index.html)
+   👉 [https://www.apachefriends.org/index.html](https://www.apachefriends.org/index.html)
 
-2. **Start Apache & MySQL** via XAMPP Control Panel.
-
-3. **Clone or Copy this Repository** into your `htdocs` directory:
-
-4. **Create MySQL Database**  
-Open `phpMyAdmin` → create a database named `blog`.
-
-5. **Run SQL to create tables:**
-
-```sql
-CREATE TABLE users (
-id INT AUTO_INCREMENT PRIMARY KEY,
-username VARCHAR(255) NOT NULL,
-password VARCHAR(255) NOT NULL
-);
-
-CREATE TABLE posts (
-id INT AUTO_INCREMENT PRIMARY KEY,
-title VARCHAR(255) NOT NULL,
-content TEXT NOT NULL,
-created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-user_id INT,
-FOREIGN KEY (user_id) REFERENCES users(id)
-);
-
-6. **Access the app:**
-http://localhost/blog-app/register.php
+2. **Clone Repository** into `htdocs`  
+   ```bash
+   git clone https://github.com/ManasRanjanJena6/php_webdev_proj.git
