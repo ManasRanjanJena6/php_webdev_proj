@@ -1,4 +1,10 @@
-## 🚀 Final Project
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
+![Built With](https://img.shields.io/badge/Built%20With-PHP-blue)
+![UI](https://img.shields.io/badge/UI-Bootstrap%205-purple)
+![Security](https://img.shields.io/badge/Security-Enhanced-red)
+![Roles](https://img.shields.io/badge/Feature-User%20Roles-yellowgreen)
+
+# 🚀 Final Project
 
 ### 🎯 Objective
 
