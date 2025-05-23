@@ -27,11 +27,11 @@
 
 ### 3. `settings` Table
 
-| Column         | Type         | Description                         |
-|----------------|--------------|-------------------------------------|
-| `id`           | INT          | Primary Key, Auto-increment         |
-| `site_name`    | VARCHAR(255) | Name of the website                 |
-| `site_description` | TEXT     | Description of the website          |
+| Column             | Type         | Description                |
+|--------------------|--------------|----------------------------|
+| `id`               | INT          | Primary Key, Auto-increment|
+| `site_name`        | VARCHAR(255) | Name of the website        |
+| `site_description` | TEXT         | Description of the website |
 
 ---
 
@@ -54,25 +54,36 @@ CREATE TABLE users (
     password VARCHAR(255) NOT NULL,
     role ENUM('admin', 'editor', 'user') NOT NULL
 );
+```
 
+### Create `posts` Table
+```sql
+CREATE TABLE posts (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    content TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    user_id INT NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);
+```
+
+### Create `settings` Table
+```sql
+CREATE TABLE settings (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    site_name VARCHAR(255) NOT NULL,
+    site_description TEXT
+);
+```
 
 ---
 
-### **Changes Made**
-1. **Added `role` Column to `users` Table**:
-   - Included the `role` column to document role-based access control.
+## Future Enhancements
 
-2. **Added `settings` Table**:
-   - Documented the `settings` table for site configuration.
-
-3. **Relationships Section**:
-   - Explained the relationship between `users` and `posts`.
-
-4. **Example SQL Queries**:
-   - Added SQL queries to create the `users`, `posts`, and `settings` tables.
-
-5. **Future Enhancements**:
-   - Suggested adding `comments`, `categories`, and `audit_logs` tables for scalability.
+- Add `comments` table for post comments.
+- Add `categories` table for post categorization.
+- Add `audit_logs` table for tracking user actions.
 
 ---
 
